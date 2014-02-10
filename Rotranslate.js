@@ -2,7 +2,7 @@
  (function($){
   $.fn.Rotranslate = function(options) {
 
-  // Default Values
+   	// Default Values
 
 	var defaults = {
 	  xInverse: false,
@@ -27,7 +27,7 @@
 	var CenterY = wrapperOffset.top + (myContainer.height()/2) ;
 
 	$(window).mousemove(function(e) {
-	
+
 		// Getting Current Mouse Positions
 		var mouseX = e.pageX;
 		var mouseY = e.pageY;
@@ -54,6 +54,8 @@
 				var RelY =  ( mouseY - CenterY ) * sensitivityMultiplier; 
 			}
 
+			myContainer.css ('-webkit-transform-style','preserve-3d');
+			myContainer.css ('transform-style','preserve-3d');
 			myContainer.css('-webkit-transform', 'perspective(1000px) translateY(' + RelY + 'px) translateX(' + RelX + 'px) ' );
 			myContainer.css('transform', 'perspective(1000px) translateY(' + RelY + 'px) translateX(' + RelX + 'px)' );
 		
@@ -72,6 +74,8 @@
 				var RelX = ( ( mouseX - CenterX ) * -1 ) * sensitivityMultiplier;
 			}
 
+			myContainer.css ('-webkit-transform-style','preserve-3d');
+			myContainer.css ('transform-style','preserve-3d');
 			myContainer.css('-webkit-transform', 'perspective(1000px) rotateY(' + RelX + 'deg) rotateX(' + RelY + 'deg)' );
 	    	myContainer.css('transform', 'perspective(1000px) rotateY(' + RelX + 'deg) rotateX(' + RelY + 'deg)' );
 		}
