@@ -4,32 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Coding Droid Parallex</title>
 	<link rel="stylesheet" href="style.css">
-	<script type="text/javascript" src="js/modernizr.custom.js"></script>
-	<script type="text/javascript" src="js/rotr.js"></script>
+	<script type="text/javascript" src="src/rotr.js"></script>
 	
 </head>
 <body>
 	<div id="container">
-		<div id="logo">
-			<div id="left"></div>
-			<div id="right"></div>
-		</div>
 
 		<div id="text">
-			<h1>Coding Droid</h1>
-			<p>Just Another Awesome Site</p>
+			<h1>JSArtisan</h1>
+			<p>Pawan kumar</p>
 		</div>
 	</div>
 
   <script>
-  	myModel = new Rotr("#logo",{
-  		xInverse : true,
+  	text = new Rotr("#text",{
+  		speed : 0.08
   	});
 
-  	  	myModel2 = new Rotr("#text",{
-  		xInverse : true,
-  	});
-  	console.log(myModel);
   </script>
 
 </body>
