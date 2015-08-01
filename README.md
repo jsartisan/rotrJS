@@ -30,12 +30,14 @@ To apply it on a elment , create the Rotr Object passing the element and options
 
 ```js
   var defaults = {
-			xInverse: false,//asd
-			yInverse: false,
-			speed : 0.09,
-			translate : true,
-			rotate : true,
-			vertical : true,
-  };
+	xInverse: false,
+	yInverse: false,
+	speed : 0.09,
+	translate : true,
+	rotate : true,
+	vertical : true,
+	horizontal : true
+			
+};
 ```
 
